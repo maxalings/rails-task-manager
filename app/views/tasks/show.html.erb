@@ -1,15 +1,15 @@
 <h1>show</h1>
 
-<%= @tasks.title %>
-<%= @tasks.details %>
-<%= @tasks.completed %>
+<%= @task.title %>
+<%= @task.details %>
+<%= @task.completed %>
 <br>
 
-<%= link_to "add another one", new_path %>
+<%= link_to "add another one", new_task_path %>
 <br>
 <%= link_to "back to list", tasks_path %>
 <br>
-<%= link_to "edit", edit_path %>
+<%= link_to "edit", edit_task_path(:id) %>
 
 
-<%= link_to "Delete", task_path(@tasks), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to "Delete", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
